@@ -1,26 +1,16 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import Login from '../pages/Login.vue'
-import Cadastro from '../pages/Cadastro.vue'
+import LoginPage from '../pages/LoginPage.vue'
+import RegisterPage from '../pages/RegisterPage.vue'
 import Dashboard from '../pages/Dashboard.vue'
 import Controle from '../pages/Aparelho.vue'
 
 const routes = [
-  { path: '/',
-    redirect: '/login' 
-  },
-  { path: '/login',
-    component: Login
-  },
-  { path: '/cadastro',
-    component: Cadastro
-  },
-  { path: '/dashboard',
-    component: Dashboard
-  },
-  { path: '/controle',
-    component: Controle
-  }
+  { path: '/', redirect: '/login' },
+  { path: '/login', component: LoginPage },
+  { path: '/register', component: RegisterPage },
+  { path: '/dashboard', component: Dashboard },
+  { path: '/controle', component: Controle }
 ]
 
 const router = createRouter({
